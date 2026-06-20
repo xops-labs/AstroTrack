@@ -1,5 +1,5 @@
 # --- build stage ---
-FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
+FROM mcr.microsoft.com/dotnet/sdk:10.0 AS build
 WORKDIR /src
 COPY backend/AstroTrack.sln backend/Directory.Build.props ./backend/
 COPY backend/src ./backend/src
