@@ -9,7 +9,7 @@ RUN dotnet publish backend/src/AstroTrack.Api/AstroTrack.Api.csproj \
     -c Release -o /app/publish /p:UseAppHost=false
 
 # --- run stage ---
-FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS final
+FROM mcr.microsoft.com/dotnet/aspnet:10.0 AS final
 WORKDIR /app
 # curl is used by the container HEALTHCHECK below; it is not in the base image.
 RUN apt-get update \
